@@ -1,0 +1,479 @@
+
+/* === CSS RESET ===  */
+
+    html, body, h1, ul {
+        margin: 0;
+        padding: 0;
+    }
+
+/* === CSS RESET ===  */
+
+
+/* === GLOBAL SCOPE VARIABLES ===  */
+
+:root {
+    --theme-color-white: #ffffff;
+    --theme-color-blue: #4579df;
+    --theme-color-black: #000000;
+
+    --button-main-navigation: #f09648;
+    --button-main-navigation-darker: #fa8c2d;
+
+    --font-main-menu_black: #3a4147;
+
+    --aside-menu-border-color: lightgray;
+}
+
+/* === GLOBAL SCOPE VARIABLES ===  */
+
+
+/* === FONTS ===  */
+
+
+/* Filson W01 Regular */
+@font-face {
+    font-family: 'FilsonPro_Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src:url("../fonts/certificate_fonts/FilsonPro-Regular.ttf") format("truetype");
+}
+
+/* Filson W01 Bold */
+@font-face {
+    font-family: 'FilsonPro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:url("../fonts/certificate_fonts/FilsonPro-Regular.ttf") format("truetype");
+}
+
+/* Filson Main Menu Items */
+@font-face {
+    font-family: 'FilsonPro_MainMenuItems';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:url("../fonts/certificate_fonts/FilsonPro-Regular.ttf") format("truetype");
+}
+
+/* Segoe UI Hero Text */
+@font-face {
+    font-family: 'Segoe UI_HeroText';
+    src: url('../fonts/segoe-ui/SegoeUI.woff2') format('woff2'),
+    url('../fonts/segoe-ui/SegoeUI.woff') format('woff'),
+    url('../fonts/segoe-ui/SegoeUI.ttf') format('truetype'),
+    url('../fonts/segoe-ui/SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Segoe UI Breadcrumbs */
+@font-face {
+    font-family: 'Segoe UI_HeroText';
+    src: url('../fonts/segoe-ui/SegoeUI.woff2') format('woff2'),
+    url('../fonts/segoe-ui/SegoeUI.woff') format('woff'),
+    url('../fonts/segoe-ui/SegoeUI.ttf') format('truetype'),
+    url('../fonts/segoe-ui/SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Segoe UI Side Menu Bold */
+@font-face {
+    font-family: 'Segoe UI_TextBold';
+    src: url('../fonts/segoe-ui/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/segoe-ui/SegoeUI-Bold.woff') format('woff'),
+    url('../fonts/segoe-ui/SegoeUI-Bold.ttf') format('truetype'),
+    url('../fonts/segoe-ui/SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: Bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* === FONTS ===  */
+
+
+/* === MAIN NAVIGATION ===  */
+
+body > header {
+    background-color: var(--theme-color-white);
+
+    height: 6.3em;
+    padding: 0 6em;
+
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+body > header > a {
+    position: absolute;
+    top: 0;
+    left: 6em;
+}
+
+body > header > nav > ul {
+    display: flex;
+}
+
+body > header > nav > ul > li {
+    list-style-type: none;
+    padding: 0 0.625em;
+}
+
+/* All caps for this list item */
+body > header > nav > ul > li::first-letter {
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+
+/* Uppercase for first character in list items */
+body > header > nav > ul > li:nth-of-type(8) {
+    text-transform: uppercase;
+}
+
+body > header > nav > ul > li:nth-of-type(8) > a {
+    font-family: Segoe UI_HeroText, sans-serif;
+}
+
+body > header > nav > ul > li:nth-of-type(9) > button {
+
+    background-color: var(--theme-color-white);
+    border: none;
+    cursor: pointer;
+}
+
+body > header > nav > ul > li > a {
+    font-family: FilsonPro_MainMenuItems, sans-serif;
+    text-decoration: none;
+    color: var(--font-main-menu_black);
+}
+body > header > nav > ul > li > a:hover {
+    color: var(--theme-color-blue);
+}
+
+/* Menu item with the orange background */
+body > header > nav > ul > li:nth-of-type(7) > a {
+    color: var(--theme-color-white);
+    background-color: var(--button-main-navigation);
+
+    padding: 0.8em 1.5em;
+    border-radius: 2em;
+
+}
+
+/* Menu item with the orange background */
+body > header > nav > ul > li:nth-of-type(7) > a:hover {
+
+    background-color: var(--button-main-navigation-darker);
+
+}
+
+
+body > header > nav > ul > li:nth-of-type(7) > a > svg {
+    margin-left: 0.5em;
+}
+
+/* === MAIN NAVIGATION ===  */
+
+
+
+/* === HERO ===  */
+
+body > main > div#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    grid-column-start: 1;
+    grid-column-end: span 3;
+
+    height: 25em;
+    padding: 0 30em;
+    margin-bottom: 1em;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.4) 51%, rgba(0, 0, 0, 0.65) 100%), url("../Boomtop3-1920x0-c-default.webp");
+    background-position: 25%;
+}
+
+body > main > div#hero > h1 {
+
+    color: var(--theme-color-white);
+
+    font-family: FilsonPro, sans-serif;
+    font-size: 2.5em;
+}
+
+body > main > div#hero > h1::first-letter {
+    text-transform: capitalize;
+}
+body > main > div#hero > p {
+    color: var(--theme-color-white);
+
+    font-size: 1.125em;
+    font-family: Segoe UI_HeroText, sans-serif;
+}
+
+/* === HERO ===  */
+
+
+
+/* === BREADCRUMBS ===  */
+
+body > main > nav {
+
+    grid-row-start: 2;
+
+
+    margin-left: 6em;
+}
+
+body > main > nav > ul {
+    display: flex;
+}
+
+body > main > nav > ul > li {
+    list-style-type: none;
+}
+
+body > main > nav > ul > li::first-letter {
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+body > main > nav > ul > li:last-of-type::before, body > main > nav > ul > li:nth-of-type(2)::before {
+    content: "/";
+    padding: 0 0.3em;
+}
+
+body > main > nav > ul > li > a {
+
+    display: inline-block;
+
+    text-decoration: none;
+    color: var(--font-main-menu_black);
+
+    font-family: Segoe UI_HeroText, sans-serif;
+    font-size: 0.875em;
+}
+
+body > main > nav > ul > li > a::first-letter {
+    text-transform: uppercase;
+}
+
+body > main > nav > ul > li > a:hover {
+    text-decoration: underline var(--theme-color-black);
+}
+
+/* === BREADCRUMBS ===  */
+
+
+/* === ASIDE MENU ===  */
+
+
+body > main > aside {
+
+    grid-row-start: 3;
+    grid-row-end: span 9;
+    grid-column-start: 1;
+
+    margin: 2em 1em 0 6em;
+    width: 20em;
+}
+
+body > main > aside > ul {
+    list-style-type: none;
+}
+
+body > main > aside > ul > li {
+    border-bottom: 0.0625em solid var(--aside-menu-border-color);
+}
+
+body > main > aside > ul > li > a {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+}
+body > main > aside > ul > li > a:hover > p {
+    font-family: "Segoe UI_TextBold", sans-serif;
+}
+
+body > main > aside > ul > li > a > p {
+    color: var(--font-main-menu_black);
+    width: 10em;
+
+    font-family: "Segoe UI_HeroText", sans-serif;
+    font-weight: lighter;
+    font-size: 1.3em;
+}
+
+body > main > aside > ul > li > a > p::first-letter {
+    text-transform: uppercase;
+}
+
+body > main > aside > ul > li > a > svg:first-of-type {
+    height: 2.75em;
+    width: 2.8125em;
+    margin: 0 1.3em 0 1.2em;
+}
+
+body > main > aside > ul > li > a > svg:last-of-type path {
+    fill: var(--theme-color-black);
+}
+
+/* === ASIDE MENU ===  */
+
+
+/* === MAIN CONTENT STRUCTURE ===  */
+
+body > main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+}
+
+
+
+/* === MAIN CONTENT STRUCTURE ===  */
+
+/* === MAIN CONTENT ===  */
+
+body > main > header {
+    display: flex;
+    align-items: center;
+
+    grid-column-start: 2;
+    grid-column-end: span 3;
+
+    grid-row-start: 3;
+
+    margin-bottom: 3em;
+}
+
+body > main > header > h2 {
+    font-family: "Segoe UI_TextBold", sans-serif;
+    font-size: 1.8em;
+}
+
+body > main > header > h2:first-letter {
+    text-transform: capitalize;
+}
+
+body > main > ul {
+    grid-column-start: 2;
+    grid-column-end: span 3;
+
+    grid-row-start: 4;
+
+    list-style-type: none;
+    margin-right: 6em;
+}
+
+body > main > ul > li {
+
+   margin-bottom: 3em;
+    cursor: pointer;
+
+}
+
+body > main > ul > li > details {
+
+    font-family: "Segoe UI_TextBold", sans-serif;
+
+}
+
+body > main > ul > li > details > p{
+
+    font-family: "Segoe UI_HeroText", sans-serif;
+    font-weight: lighter;
+
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+body > main > ul > li > details > summary {
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.1em;
+    list-style-type: none;
+}
+
+body > main > ul > li > details > summary::after {
+
+    content: "\002B";
+    font-size: 1.3em;
+    transition:.5s;
+    transform:translateY(0) rotate(0deg);
+}
+
+body > main > ul > li > details[open] > summary::after {
+
+
+    /*transform:translateY(.25em) rotate(270deg);*/
+    transform:translateY(.25em) rotate(180deg);
+
+}
+
+/*details[open] summary::after {*/
+/*    transform:translateY(.25em) rotate(225deg);*/
+/*}*/
+
+
+/*body > main > ul > li > details:first-of-type {*/
+/*    grid-column-start: 2;*/
+/*    grid-column-end: span 3;*/
+
+/*    grid-row-start: 4;*/
+/*}*/
+
+/*body > main > ul > li > details:nth-of-type(2) {*/
+/*    grid-column-start: 2;*/
+/*    grid-column-end: span 3;*/
+
+/*    grid-row-start: 5;*/
+/*}*/
+
+/*body > main > ul > li > details:nth-of-type(3) {*/
+/*    grid-column-start: 2;*/
+/*    grid-column-end: span 3;*/
+
+/*    grid-row-start: 6;*/
+/*}*/
+
+/*body > main > ul > li > details:nth-of-type(4) {*/
+/*    grid-column-start: 2;*/
+/*    grid-column-end: span 3;*/
+
+/*    grid-row-start: 7;*/
+/*}*/
+
+/*body > main > ul > li > details:nth-of-type(5) {*/
+/*    grid-column-start: 2;*/
+/*    grid-column-end: span 3;*/
+
+/*    grid-row-start: 8;*/
+/*}*/
+
+/*body > main > ul > li > details:nth-of-type(6) {*/
+/*    grid-column-start: 2;*/
+/*    grid-column-end: span 3;*/
+
+/*    grid-row-start: 9;*/
+
+/*}*/
+
+
+
+
+/* === MAIN CONTENT ===  */
