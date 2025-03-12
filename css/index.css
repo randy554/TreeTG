@@ -22,6 +22,8 @@
     --font-main-menu_black: #3a4147;
 
     --aside-menu-border-color: lightgray;
+
+    --link-color: #0e359b;
 }
 
 /* === GLOBAL SCOPE VARIABLES ===  */
@@ -55,6 +57,15 @@
     font-weight: 600;
     font-display: swap;
     src:url("../fonts/certificate_fonts/FilsonPro-Regular.ttf") format("truetype");
+}
+
+/* Filson Main Menu Items lite */
+@font-face {
+    font-family: 'FilsonPro_MainMenuItemsLite';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src:url("../fonts/filson-pro/FilsonProLight.otf") format("truetype");
 }
 
 /* Segoe UI Hero Text */
@@ -114,7 +125,12 @@
 
 .skip-link:focus {
     translate: 0;
+}   
+
+a:focus {
+    border: var(--link-color) .2rem solid;
 }
+
 
 body > header {
     background-color: var(--theme-color-white);
@@ -172,8 +188,11 @@ body > header > nav > ul > li > a {
     text-decoration: none;
     color: var(--font-main-menu_black);
 }
+
 body > header > nav > ul > li > a:hover {
     color: var(--theme-color-blue);
+    font-family: FilesonPro_Regular, sans-serif;
+    font-weight: lighter;
 }
 
 /* Menu item with the orange background */
@@ -317,10 +336,10 @@ body > main > aside > ul > li {
 body > main > aside > ul > li > a {
     display: flex;
     align-items: center;
-
     text-decoration: none;
 
 }
+
 body > main > aside > ul > li > a:hover > p {
     font-family: "Segoe UI_TextBold", sans-serif;
 }
@@ -425,6 +444,7 @@ body > main > section > details > p {
     margin-left: 1em;
     margin-right: 1em;
 }
+
 
 body > main > section > details > summary {
 
